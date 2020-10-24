@@ -1,7 +1,6 @@
 package com.georgcantor.hilt.model.local
 
 import androidx.room.*
-import com.georgcantor.hilt.model.data.Article
 
 @Dao
 interface NewsDao {

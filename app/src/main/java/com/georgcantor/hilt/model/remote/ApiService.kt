@@ -1,5 +1,6 @@
 package com.georgcantor.hilt.model.remote
 
+import com.georgcantor.hilt.BuildConfig
 import com.georgcantor.hilt.model.data.News
 import retrofit2.http.GET
 import retrofit2.http.Query

@@ -57,6 +57,7 @@ dependencies {
     implementation "androidx.room:room-ktx:$versions.roomVersion"
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.1'
     kapt "androidx.room:room-compiler:$versions.roomVersion"
 
     implementation "androidx.startup:startup-runtime:$versions.startupVersion"
@@ -78,6 +79,8 @@ dependencies {
     testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$versions.coroutinesVersion"
     testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$versions.coroutinesVersion"
 
+    kapt 'com.github.bumptech.glide:compiler:4.11.0'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
 
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
