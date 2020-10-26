@@ -1,6 +1,7 @@
 package com.georgcantor.hilt.model.local
 
 import androidx.room.*
+import com.georgcantor.hilt.model.data.Article
 
 @Dao
 interface NewsDao {
@@ -9,7 +10,7 @@ interface NewsDao {
     suspend fun insert(article: Article)
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertAll(articles: List<Article>)
+    suspend fun insertAll(articles: List<Article>?)
 
     @Delete
     suspend fun delete(article: Article)
