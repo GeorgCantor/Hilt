@@ -12,7 +12,7 @@ import com.georgcantor.hilt.util.ApiResponse
 import com.georgcantor.hilt.util.bind
 
 class NewsViewModel @ViewModelInject constructor(
-    private val repository: Repository,
+    repository: Repository,
     @Assisted private val savedStateHandle: SavedStateHandle
 ) : ViewModel() {
 

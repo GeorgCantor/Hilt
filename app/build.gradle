@@ -27,6 +27,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    buildTypes.each {
+        it.buildConfigField 'String', 'BASE_URL', "\"https://newsapi.org/v2/\""
+        it.buildConfigField 'String', 'API_KEY', "\"you_api_key\""
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -58,6 +64,7 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.3.1'
+    implementation "androidx.navigation:navigation-ui-ktx:2.3.1"
     kapt "androidx.room:room-compiler:$versions.roomVersion"
 
     implementation "androidx.startup:startup-runtime:$versions.startupVersion"

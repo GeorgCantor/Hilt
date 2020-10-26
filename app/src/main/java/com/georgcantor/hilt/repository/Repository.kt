@@ -21,12 +21,12 @@ class Repository @Inject constructor(
             true -> {
                 if (response.body() != null) {
                     newsDatabase.newsDao().insertAll(response.body()?.articles)
-                    emit(ApiResponse.Success(response))
+                    emit(ApiResponse.Success(response.body()?.articles))
                 } else {
                     emit(ApiResponse.Success(articles))
                 }
             }
             false -> emit(ApiResponse.Error(R.string.no_internet, articles))
         }
-    } as Flow<ApiResponse<List<Article>>>
+    }
 }
